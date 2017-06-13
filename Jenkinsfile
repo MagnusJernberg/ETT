@@ -2,7 +2,7 @@ node {
   stage ('start') {
     def userInput = input(
     id: 'userInput', message: 'Let\'s promote?', parameters: [
-      [$class: 'TextParameterDefinition', defaultValue: 'build?', description: 'Environment', name: 'env']
+      [$class: 'TextParameterDefinition', defaultValue: 'Yes', description: 'Build?', name: 'Answer']
     ])
     echo ("Build?: "+userInput)
   }
